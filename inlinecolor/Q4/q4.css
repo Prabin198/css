@@ -1,0 +1,56 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    color: white;
+}
+#navbar{
+    height: 60px;
+    border: 2px solid rgb(7, 7, 7);
+    background-color: #171616;
+    
+}
+#logo{
+    font-size: 25px;
+    font-weight: large;
+    color:orange
+}
+button{
+    background-color: #f08804;
+}
+a{
+    margin-right: 200px;
+    text-decoration: none;
+}
+#go{
+    color:black
+
+}
+#main{
+    
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    margin: 0px 0px 0px 0px;
+    display:inline-block;
+    margin-right: 200px;
+    background-image: url(https://cdn.logojoy.com/wp-content/uploads/20230629132442/Amazon-logo-1536x1034.jpg);
+background-size: 100px 100px;
+
+}
+#footer{
+    border: 2px solid black;
+    margin: 0px 0px 0px 0px;
+    background-color: rgba(0, 0, 0, 1);
+    display: block;
+    text-align: center;
+    text-transform: capitalize;
+    text-shadow:gray;
+    font-family:Arial;
+    
+    
+}
+main{
+    height: 500px;
+    background-color: rgba(45, 49, 51, 0.5);
+    background-image: url(https://m.media-amazon.com/images/G/01/digital/adrive/images/photos/landingpage/cooper/Cooper_AllDevices_Hero_US._TTH_.png);
+}

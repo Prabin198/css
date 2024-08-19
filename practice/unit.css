@@ -1,0 +1,20 @@
+div{
+    height: 100px;
+    width: 100px;
+    background-color: rgba(0,  0, 0, 1);
+    margin: 10px;
+font-size: 10px;
+color: blue;
+    
+}
+#one{
+    height: 50px;
+    width: 10rem;/*rem le chai defult font size sanga multiply hanxa*/
+    background-color: rgb(226, 7, 7);
+margin-left: 1em;
+
+
+font-size: 2em;/*em le chai no of time of em to parent box */
+width: 5em;/*yesma chai parent font size 10px*child font size 1*width*/
+
+}

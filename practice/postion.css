@@ -1,0 +1,54 @@
+div{
+    height: 100px;
+    width: 500px;
+    background-color: blue;
+    border: 2px solid black;
+}
+#box1{
+    height: 30px;
+    width: 30%;
+    background-color: red;
+    position: static;/*fixed hunxa position*/
+
+
+}
+#box2{
+    height: 30px;
+    width: 30%;
+    background-color: green;
+    z-index: 1;/*yesle chai priority of box matlab kun le overlap hunxa tesko priority dinxa jasko dher thulo tyo agadi*/
+    display: inline-block;
+    position: relative;/*yesko chai just postion move hunxa top,left, right haru deyara*/
+    top: 3px;
+    left: 3px;
+}
+#box3{
+    height: 30px;
+    width: 40%;
+    background-color: yellow;
+    display: inline-block;
+    position:fixed;/*yo chai page jati tala samma lage nih fixed rahanxa display scroll sangai hunxa*/
+    top:10px;
+    
+
+    
+    
+}
+.hello{
+    height:25px;
+width: 300px;
+}
+#box4{
+    height:50px ;
+    width: 50px;
+    background-color: azure;
+    position:sticky;/*yo chai page jati tala samma lage nih sticky rahanxa display scroll sangai hunxa*/
+    top:00px;/*0px height mah aayesi matra scroll hunxa*/
+}
+#box5{
+    height:50px ;
+    width: 50px;
+    background-color: rgb(30, 206, 206);
+    position:absolute;/*absolute le chai closest positioned ansestor bata chai px top,left, right tira move hunxa box*/  
+    top: 30px;
+}

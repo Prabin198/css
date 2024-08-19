@@ -1,0 +1,25 @@
+p{
+    text-align: right;
+    text-decoration:underline wavy;
+}
+#h1{
+    text-align: center;
+}
+div{
+    font-weight: bolder;
+}
+div,h1{
+    font-weight: 500;
+text-decoration: overline dotted;
+text-align: center;
+    
+}
+a{
+    text-decoration: none;/*by defult underline score ako hunxa yesma so teslai hatako*/
+}
+.myclz{
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 20px;/*font size*/
+line-height: 25px;/*line bich ko gap */
+text-transform: capitalize;
+}

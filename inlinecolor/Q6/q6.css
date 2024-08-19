@@ -1,0 +1,33 @@
+a{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+}
+div{
+    height: 60px;
+    width: 100%;
+background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/655a9668-b002-4262-8afb-cf71e45d1956/1c38a990-f052-4780-b634-058296d274f9/NP-en-20240715-POP_SIGNUP_TWO_WEEKS-perspective_WEB_0f80906d-87a5-4c86-9cac-2f74a52f0b3d_small.jpg);
+background-size: cover;
+background-blend-mode:luminosity;
+}
+li{
+    color: lavender;
+
+}
+.one{
+ display: flex;
+ justify-content: center;
+}
+.two{
+    border: 0px;
+    width: 50%;
+    background-color: pink;
+}
+.three{
+    border:00px;
+    background-color: blue;
+}

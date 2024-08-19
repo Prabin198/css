@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(92, 126, 126);
+}
+h1{
+    color: #ff00ff; /*hexadecimal*/
+}
+button{
+    background-color: rgb(103, 94, 94);/*rgb colormodel*/
+    color: white;
+}
+#one{
+    color:#f2f4f6;/*id selector*/
+}
+.myclz{
+    color:blueviolet;/*class selector*/
+}

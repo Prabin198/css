@@ -1,0 +1,30 @@
+.two{
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+    position:absolute;
+    top: 100px;
+    left: 500px;
+border-radius: 50%;
+animation: wow 1s ease-in 0s infinite ;
+animation-direction: alternate;
+    
+}
+
+@keyframes wow {
+    0%{
+        opacity: 0.25;
+        left: 000px;
+
+    }
+    50%{
+        background-color: lightcoral;
+
+    }
+    100%{
+        opacity: 1;
+        right: 500px;
+        background-color: crimson;
+    }
+    
+}

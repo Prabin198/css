@@ -1,0 +1,27 @@
+div{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: darkblue;
+    margin: 20px;
+    padding: 20px;
+    display: inline-block;
+border: 10px solid black;
+
+
+}
+span{
+    height: 50px;
+    width: 50px;
+    background-color:rgba(255, 200, 0, 0.5);
+    margin: 40px;
+    padding: 40px;
+    display: block;
+
+}
+#one{
+    visibility: hidden;
+}
+#Two{
+    display: none;
+}

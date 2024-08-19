@@ -1,0 +1,33 @@
+body{
+    margin-top: 200px;
+    padding: 0px;
+    background-color: rgba(74, 40, 114,0.75);
+}
+.go{
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+}
+.hero{
+    height: 200px;
+    width: 500px;
+    overflow-x:scroll;
+    background-color: rgb(228, 87, 87);
+}
+ ::-webkit-scrollbar{
+     width:5px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(255, 255, 255);
+}
+ ::-webkit-scrollbar-thumb{
+  background-color: rgb(123, 62, 62);
+    width: 5px;
+} 
+.box{
+    height: 50px;
+    width: 60px;
+    background-color: rgb(49, 102, 215);
+
+    
+}
