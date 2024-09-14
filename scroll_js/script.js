@@ -7,11 +7,12 @@ scrollContainer.addEventListener('wheel',(evt)=>{
          scrollContainer.style.scrollBehavior="auto";
 })
 backBtn.addEventListener('click',()=>{
+    scrollContainer.style.scrollBehavior="smooth";
     scrollContainer.scrollLeft -=900;
-    
 
 })
 nextBtn.addEventListener('click',()=>{
+    scrollContainer.style.scrollBehavior="smooth";
     scrollContainer.scrollLeft +=900;
     
 })
