@@ -48,6 +48,57 @@ const quizData=[
             "lo"
         ],
         correct:2,
+    },
+    {
+        question:"Who developed and designed TypeScript?",
+        options:[
+            "Microsoft",
+            "TypeScript",
+            "Amazon",
+            "Google"
+        ],
+        correct:0,
+    },
+    {
+        question:"JavaScript File Has An Extension of:",
+        options:[
+            ".JavaScript",
+            ".js",
+            ".Java",
+            ".xml"
+        ],
+        correct:1,
+    },
+    {
+        question:"Which statement cannot be used to declare a variable in JavaScript?",
+        options:[
+            "let",
+            "var",
+            "const",
+            "int"
+        ],
+        correct:3,
+    },
+    {
+        question:"Given x = new Date(), how do you represent x as a String in universal time (time zone +0000)?",
+        options:[
+            "X.getUTC();",
+            "x.getUTCDate()",
+            "x.toUTCString",
+            "x.getUTCString"
+        ],
+        correct:2,
+    },
+    
+    {
+        question:"Given the following, what is the value of x? var x = typeof 'abc' ",
+        options:[
+            "abc",
+            "string",
+            "undefined",
+            "error"
+        ],
+        correct:1,
     }
 ];
 //step two
@@ -61,7 +112,7 @@ let score=0;
 //Step three
 const loadQuiz= ()=>{
     const { question,options}=quizData[currentQuiz];
-    questionElm.innerText=question;
+    questionElm.innerText=`${currentQuiz+1}.${question}`;
     options.forEach((currOpt,Index)=>(
         window[`option_${Index+1}`].innerText=currOpt
     )
@@ -98,7 +149,7 @@ btn.addEventListener('click',()=>{
     }
     else{
         quiz.innerHTML=`<div class="result">
-        <h2>Your Score:${score}/${quizData.length}Correct Answer </h2>
+        <h2>🏆Your Score:${score}/${quizData.length} Correct Answer </h2>
         <P>Congratulation on completing the quiz!🎉</P>
         <button class='reload-button' onclick="location.reload()">Play Again 🔄️</button>
         </div>`
