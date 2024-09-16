@@ -1,0 +1,108 @@
+const quizData=[
+    {
+        question:"What does HTML stands for?",
+        options:[
+            "HyperText Markup Language",
+            "HyperText Machine Language",
+            "Hyper Transfer Markup Language",
+            "Hyperlink and Text Markup Language"
+        ],
+        correct:0,
+    },
+    {
+        question:"Which CSS property is used to control the space between the elements?",
+        options:[
+            "Margin",
+            "Padding",
+            "Spacing",
+            "Border-Spacing"
+        ],
+        correct:1,
+    },
+    {
+        question:"What is the javascript function used to select the HTML element by its id?",
+        options:[
+            "getElementsByClassName",
+            "querySelector",
+            "findElementById",
+            "getElementById"
+        ],
+        correct:3,
+    },
+    {
+        question:"Which one of these is higher order loop?",
+        options:[
+            "For Loop",
+            "Do While Loop",
+            "While Loop",
+            "For of Loop"
+        ],
+        correct:3,
+    },
+    {
+        question:"Which HTML tag is used to create the ordered list?",
+        options:[
+            "li",
+            "ul",
+            "ol",
+            "lo"
+        ],
+        correct:2,
+    }
+];
+//step two
+const answerElm=document.querySelectorAll('.answer');
+const [questionElm,option_1,option_2,option_3,option_4]=document.querySelectorAll('.question','#option_1','#option_2','#option_3','#option_4');
+const btn=document.querySelector("#submit");
+let currentQuiz=0;
+const quiz=document.querySelector('.quiz')
+let score=0;
+// console.log(questionElm)
+//Step three
+const loadQuiz= ()=>{
+    const { question,options}=quizData[currentQuiz];
+    questionElm.innerText=question;
+    options.forEach((currOpt,Index)=>(
+        window[`option_${Index+1}`].innerText=currOpt
+    )
+    );
+};
+loadQuiz();
+//step four
+const getCheckedOption = ()=>{
+   let ans_Index;
+    answerElm.forEach((currOpt,Index)=>{
+          if(currOpt.checked){
+            ans_Index=Index;
+          }
+    });
+return ans_Index;
+}
+// let answerElement=Array.from(answerElm);
+//  return answerElement.findIndex((currElm)=>{currElm.checked});
+// }
+const deSelectedAnswer=()=>{
+   return  answerElm.forEach((currOpt)=>currOpt.checked =false);
+}
+btn.addEventListener('click',()=>{
+    
+    const selectedOptionIndex=getCheckedOption();
+    console.log(selectedOptionIndex);
+    if(selectedOptionIndex ===quizData[currentQuiz].correct){
+        score=score+1;
+    }
+    currentQuiz++;
+    if(currentQuiz<quizData.length){
+        deSelectedAnswer();
+        loadQuiz();
+    }
+    else{
+        quiz.innerHTML=`<div class="result">
+        <h2>Your Score:${score}/${quizData.length}Correct Answer </h2>
+        <P>Congratulation on completing the quiz!🎉</P>
+        <button class='reload-button' onclick="location.reload()">Play Again 🔄️</button>
+        </div>`
+        ;
+    }
+ 
+    });
