@@ -122,7 +122,7 @@ const loadQuiz= ()=>{
     );
     
 };
-loadQuiz();
+loadQuiz();//new quiz reload after increasing currentOpt
 //step four
 const getCheckedOption = ()=>{
    let ans_Index=undefined;
@@ -138,18 +138,18 @@ const getCheckedOption = ()=>{
 // let answerElement=Array.from(answerElm);
 //  return answerElement.findIndex((currElm)=>{currElm.checked});
 // }
-const deSelectedAnswer=()=>{
+const deSelectedAnswer=()=>{//while loading next question deselecting the checked answer
  return answerElm.forEach((currOpt)=>{
     currOpt.checked =false
 });
 
 }
 btn.addEventListener('click',(e)=>{
-
+              //while clicking submit button 
             const selectedOptionIndex=getCheckedOption();
 
             answerElm.forEach((opt)=>{
-if(opt.checked){
+if(opt.checked){//option selected 
     if(selectedOptionIndex ===quizData[currentQuiz].correct){
         score=score+1;
     }
@@ -161,6 +161,7 @@ if(opt.checked){
         
     }
     else{
+        //adding the last page for score !!
         quiz.innerHTML=`<div class="result">
         <h2>🏆Your Score:${score}/${quizData.length} Correct Answer </h2>
         <P>Congratulation on completing the quiz!🎉</P>
@@ -171,10 +172,12 @@ if(opt.checked){
 }
 else{
     if(selectedOptionIndex ===undefined){
+        //add message to span if option is not selected
         message.innerHTML='Please select an Option before submitting !'
         message.style.backgroundColor='#d9d9d9';
         message.style.border='1px solid black'
     }else{
+        //remove the message from span
         message.innerHTML='';
         message.style.backgroundColor='';
         message.style.border='none'
