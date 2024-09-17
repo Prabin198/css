@@ -17,7 +17,7 @@ const quizData=[
             "Spacing",
             "Border-Spacing"
         ],
-        correct:1,
+        correct:0,
     },
     {
         question:"What is the javascript function used to select the HTML element by its id?",
@@ -106,6 +106,8 @@ const answerElm=document.querySelectorAll('.answer');
 const [questionElm,option_1,option_2,option_3,option_4]=document.querySelectorAll('.question','#option_1','#option_2','#option_3','#option_4');
 const btn=document.querySelector("#submit");
 let currentQuiz=0;
+let message=document.querySelector('.Message');
+// message.innerHTML='';
 const quiz=document.querySelector('.quiz')
 let score=0;
 // console.log(questionElm)
@@ -113,39 +115,50 @@ let score=0;
 const loadQuiz= ()=>{
     const { question,options}=quizData[currentQuiz];
     questionElm.innerText=`${currentQuiz+1}.${question}`;
+    
     options.forEach((currOpt,Index)=>(
         window[`option_${Index+1}`].innerText=currOpt
     )
     );
+    
 };
 loadQuiz();
 //step four
 const getCheckedOption = ()=>{
-   let ans_Index;
+   let ans_Index=undefined;
     answerElm.forEach((currOpt,Index)=>{
           if(currOpt.checked){
             ans_Index=Index;
+            
           }
+          
     });
-return ans_Index;
+    return ans_Index;
 }
 // let answerElement=Array.from(answerElm);
 //  return answerElement.findIndex((currElm)=>{currElm.checked});
 // }
 const deSelectedAnswer=()=>{
-   return  answerElm.forEach((currOpt)=>currOpt.checked =false);
+ return answerElm.forEach((currOpt)=>{
+    currOpt.checked =false
+});
+
 }
-btn.addEventListener('click',()=>{
-    
-    const selectedOptionIndex=getCheckedOption();
-    console.log(selectedOptionIndex);
+btn.addEventListener('click',(e)=>{
+
+            const selectedOptionIndex=getCheckedOption();
+
+            answerElm.forEach((opt)=>{
+if(opt.checked){
     if(selectedOptionIndex ===quizData[currentQuiz].correct){
         score=score+1;
     }
     currentQuiz++;
     if(currentQuiz<quizData.length){
+        
         deSelectedAnswer();
         loadQuiz();
+        
     }
     else{
         quiz.innerHTML=`<div class="result">
@@ -155,5 +168,19 @@ btn.addEventListener('click',()=>{
         </div>`
         ;
     }
- 
-    });
+}
+else{
+    if(selectedOptionIndex ===undefined){
+        message.innerHTML='Please select an Option before submitting !'
+        message.style.backgroundColor='#d9d9d9';
+        message.style.border='1px solid black'
+    }else{
+        message.innerHTML='';
+        message.style.backgroundColor='';
+        message.style.border='none'
+    }
+}
+            })
+           
+}
+    );

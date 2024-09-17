@@ -5,7 +5,8 @@
     font-family:'glory',sans-serif;
 }
 body{
-    background-color: #181818;
+    background-color: rgb(28, 27, 27);
+    background-size: cover;
     height: 100vh;
 }
 .quiz_section{
@@ -70,6 +71,7 @@ body{
     padding-left: 15px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 #submit{
     height: 30px;
@@ -103,4 +105,17 @@ body{
 }
 .quiz .result button:active{
     background-color: gray;
+}
+.Message{
+    margin-right:15px;
+    height: 38px;
+    display: flex;
+    text-align: center;
+    width: 140px;
+    font-size: 12px;
+    border: 1px solid rgb(73, 71, 71);
+   padding:4px;
+   border-radius: 4px;
+   background-color: #ffffff;
+   border: none;
 }
