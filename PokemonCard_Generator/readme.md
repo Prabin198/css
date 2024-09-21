@@ -1,0 +1,1 @@
+This is a pokemon card generator where data of pokemon are fetched from PokeAPI.
